@@ -54,8 +54,8 @@ if pages == 'Analyses des Avis':
     st.write("###### Attention toutefois à l'interprétation de ces résultats. La période Covid a été entraîné une forte volatilité des avis avec des notes de 1/10 qui n'avaient jamais été données auparavant ni après. Il faudrait faire une étude plus approfondie pour comprendre les raisons de cette forte volatilité. ")
 
 if pages == 'Modélisation des sujets abordés':
-    st.write("## Visualisation des sujets")
-    st.write("#### Après modélisation des sujets abordés par les passagers, on obtient le graphique intéractif suivant : ")
+    st.write("## Visualisation des sujets abordés par les passagers")
+    st.write("#### Après modélisation, on obtient le graphique interactif suivant : ")
     with open('lda.html', 'r') as f:
         html_string = f.read()
     components.v1.html(html_string, width=1300, height=800, scrolling=False)
