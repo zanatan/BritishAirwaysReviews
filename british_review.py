@@ -61,10 +61,11 @@ if pages == 'Modélisation des sujets abordés':
     components.v1.html(html_string, width=1300, height=800, scrolling=False)
     st.write('Le Topic 1 est le plus important avec 71% des avis. Il est associé aux mots clés suivants : "siège, classe, personnel navigant, temps, service, lounge, repas. ')
     st.write("Les autres topics sont moins importants et sont associés à la destination.")
-    st.write('Le Topic 1 est le plus grand, les plus éloigné des autres et est situé à gauche. Cela indique que les passagers sont plus préoccupés par le service que par les autres sujets.')
+    st.write('Le Topic 1 est le plus grand, les plus éloigné des autres et est situé à gauche. Cela indique que les passagers sont plus préoccupés par le service que par les autres sujets.\n')
+
+    st.write("------------------------------------------------------------------\n")
     
-    
-    st.write("#### Visualisation du nuage de mots")
+    st.write("## Visualisation du nuage de mots")
     st.image("graphiques/wordcloud.png", width=800)
     st.write('Selon les nuages de mots les passagers semblent très insastisfaits de la compagnie British Airways')
     st.write("## Réservation ou pas ? ")
