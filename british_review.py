@@ -54,16 +54,15 @@ if pages == 'Analyses des Avis':
     st.write("###### Attention toutefois à l'interprétation de ces résultats. La période Covid a été entraîné une forte volatilité des avis avec des notes de 1/10 qui n'avaient jamais été données auparavant ni après. Il faudrait faire une étude plus approfondie pour comprendre les raisons de cette forte volatilité. ")
 
 if pages == 'Modélisation des sujets abordés':
-    st.write("## Topic Modeling")
+    st.write("## Topics Modeling")
     st.write("#### Visualisation des sujets")
-    st.write("J'ai utilisé le modèle Latent Dirichlet Allocation (LDA) pour identifier les sujets abordés par les passagers et les mots clés associés à chaque sujet. La cohérence maximale entre les sujets s'obtient si le paramètre du modèle 'nombre de topics' est supérieur à 7. J'ai pris 10 topics pour lancer le modèle. ")
-    st.write("#### Le graphique est intéractif")
+    st.write("#### Après modélisation des sujets abordés par les passagers, on obtient le graphique intéractif suivant : ")
     with open('lda.html', 'r') as f:
         html_string = f.read()
     components.v1.html(html_string, width=1300, height=800, scrolling=False)
     st.write('Le Topic 1 est le plus important avec 71% des avis. Il est associé aux mots clés suivants : "siège, classe, personnel navigant, temps, service, lounge, repas. ')
     st.write("Les autres topics sont moins importants et sont associés à la destination.")
-    st.write('Le Topic 1 est le plus grand, les plus éloigné des autres et est situé à gauche. Cela indique que les passagers sont plus préoccupés par le service que par les restes des sujets.')
+    st.write('Le Topic 1 est le plus grand, les plus éloigné des autres et est situé à gauche. Cela indique que les passagers sont plus préoccupés par le service que par les autres sujets.')
     st.write("#### Visualisation du nuage de mots")
     st.image("graphiques/wordcloud.png", width=800)
     st.write('Selon les nuages de mots les passagers semblent très insastisfaits de la compagnie British Airways')
