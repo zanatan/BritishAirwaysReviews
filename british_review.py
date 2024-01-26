@@ -54,8 +54,7 @@ if pages == 'Analyses des Avis':
     st.write("###### Attention toutefois à l'interprétation de ces résultats. La période Covid a été entraîné une forte volatilité des avis avec des notes de 1/10 qui n'avaient jamais été données auparavant ni après. Il faudrait faire une étude plus approfondie pour comprendre les raisons de cette forte volatilité. ")
 
 if pages == 'Modélisation des sujets abordés':
-    st.write("## Topics Modeling")
-    st.write("#### Visualisation des sujets")
+    st.write("## Visualisation des sujets")
     st.write("#### Après modélisation des sujets abordés par les passagers, on obtient le graphique intéractif suivant : ")
     with open('lda.html', 'r') as f:
         html_string = f.read()
@@ -63,6 +62,8 @@ if pages == 'Modélisation des sujets abordés':
     st.write('Le Topic 1 est le plus important avec 71% des avis. Il est associé aux mots clés suivants : "siège, classe, personnel navigant, temps, service, lounge, repas. ')
     st.write("Les autres topics sont moins importants et sont associés à la destination.")
     st.write('Le Topic 1 est le plus grand, les plus éloigné des autres et est situé à gauche. Cela indique que les passagers sont plus préoccupés par le service que par les autres sujets.')
+    
+    
     st.write("#### Visualisation du nuage de mots")
     st.image("graphiques/wordcloud.png", width=800)
     st.write('Selon les nuages de mots les passagers semblent très insastisfaits de la compagnie British Airways')
