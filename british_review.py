@@ -50,13 +50,13 @@ if pages == 'Analyses des Avis':
     st.write("Les passagers perçoivent le rapport qualité prix comme mauvais. ")
     st.header("Conclusion")
     st.write("graphiques/Les passagers sont globalement insatisfaits du service de British Airways. Ils sont particulièrement insatisfaits du service au sol et de la nourriture.  ")
-    st.image("moyenne_mensuelle.png", width=800)
+    st.image("graphiques/moyenne_mensuelle.png", width=800)
     st.write("###### Attention toutefois à l'interprétation de ces résultats. La période Covid a été entraîné une forte volatilité des avis avec des notes de 1/10 qui n'avaient jamais été données auparavant ni après. Il faudrait faire une étude plus approfondie pour comprendre les raisons de cette forte volatilité. ")
 
 if pages == 'Modélisation des sujets abordés':
     st.write("## Topic Modeling")
     st.write("#### Visualisation des sujets")
-    st.write("J'ai utilisé le modèle Latent Dirichlet Allocation (LDA) pour identifier les sujets abordés par les passagers et les mots clés associés à chaque sujet. La cohérence maximale entre les sujets s'obtient si le paramètre du modèle 'nombre de topics' est supérieur à 7. J'ai pris 10. ")
+    st.write("J'ai utilisé le modèle Latent Dirichlet Allocation (LDA) pour identifier les sujets abordés par les passagers et les mots clés associés à chaque sujet. La cohérence maximale entre les sujets s'obtient si le paramètre du modèle 'nombre de topics' est supérieur à 7. J'ai pris 10 topics pour lancer le modèle. ")
     st.write("#### Le graphique est intéractif")
     with open('lda.html', 'r') as f:
         html_string = f.read()
